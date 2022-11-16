@@ -11,6 +11,6 @@ public class ConstractorAnsInstantiation {
 
     ConstractorAnsInstantiation obj = new ConstractorAnsInstantiation();
 
-    new ConstractorAnsInstantiation().
+    //new ConstractorAnsInstantiation().
     }
 }
