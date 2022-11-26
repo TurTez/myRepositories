@@ -9,7 +9,6 @@ public class FirstClass {
 
     public static void main(String[] args) {
 
-        //the following line declares an integar
         int x[]= {100,200,300};
 
         System.out.println(x[1]);

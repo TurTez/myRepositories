@@ -6,8 +6,8 @@ public class ThisKeyWord {
     //call the constructor call the class name
     public ThisKeyWord(int a, String s){ // to public to accerss other class and packages and project
 
-        this.a=a; // This keyword points to class level variable above
-        this.s=s;
+        //this.a=a; // This keyword points to class level variable above
+       //this.s=s;
     }
     public static void main(String[] args){ // main function
 
