@@ -1,0 +1,14 @@
+<Login>
+    <idpass>
+       <user>usernameturgut</user>
+        <pass>tur1</pass>
+    </idpass>
+    <idpass>
+        <user>usernametezir</user>
+        <pass>tur2</pass>
+    </idpass>
+    <idpass>
+        <user>usernamedeniz</user>
+        <pass>tur3</pass>
+    </idpass>
+</Login>

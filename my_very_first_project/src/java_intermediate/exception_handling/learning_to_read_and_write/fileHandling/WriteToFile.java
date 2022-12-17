@@ -1,4 +1,4 @@
-package java_intermediate.exception_handling.learning_to_read_and_write.FfileHandling;
+package java_intermediate.exception_handling.learning_to_read_and_write.fileHandling;
 
 import java.io.FileWriter;
 import java.io.IOException;

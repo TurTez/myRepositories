@@ -3,7 +3,7 @@ package java_intermediate.exception_handling.java_Curser_Iterator;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Iterator {
+public class IteratorExample {
 
     public static void main(String[] args) {
 
@@ -15,9 +15,9 @@ public class Iterator {
         state.add ("TX");
 
         Iterator xyz = state.iterator();
-        
 
-
-
+        while (xyz.hasNext()){
+            System.out.println(xyz.next());
+        }
     }
 }

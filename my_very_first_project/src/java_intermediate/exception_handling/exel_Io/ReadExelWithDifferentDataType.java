@@ -1,2 +1,62 @@
-package java_intermediate.exception_handling.exel_Io;public class ReadExelWithDifferent {
-}
+package java_intermediate.exception_handling.exel_Io;
+
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class ReadExelWithDifferentDataType {
+    public static void main(String[] args) {
+        String path = "C:\\Users\\tezir\\Turgut.xlsx";
+        String mySheetPath = "Sheet1";
+
+        try {
+
+            FileInputStream fis = new FileInputStream(path);
+            XSSFWorkbook workbook = new XSSFWorkbook(fis);
+            XSSFSheet sheet = workbook.getSheet(mySheetPath);
+
+            int myRow = sheet.getLastRowNum()+1;
+            int myCol = sheet.getRow(0).getLastCellNum();
+
+            for (int r = 0; r < myRow; r++){
+
+                XSSFRow readRow = sheet.getRow(r);
+
+                for (int c = 0; c < myCol; c++){
+
+                    //String value = readRow.getCell(c).toString();
+
+                    XSSFCell readCell = readRow.getCell(c);
+
+                    switch (readCell.getCellType()){
+
+                        case STRING:
+                            System.out.print(readCell.getStringCellValue() + "\t\t");
+                            break;
+
+                        case NUMERIC:
+                            System.out.print(readCell.getNumericCellValue() + "\t\t");
+                            break;
+
+                        case BOOLEAN:
+                            System.out.print(readCell.getBooleanCellValue() + "\t\t");
+                            break;
+                        default:
+                            System.out.println("Value is not readable");
+                    }
+                }
+                System.out.println();
+            }
+
+        }catch (IOException e){
+
+            System.out.println(e.getMessage());
+        }
+    }
+    }
+

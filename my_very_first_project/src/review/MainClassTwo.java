@@ -1,5 +1,5 @@
 package review;
-
+//as soon as we implement an interface we have to also implement its methods
 public class MainClassTwo implements MyInterfaceTwo{
 
     @Override
@@ -24,9 +24,7 @@ public class MainClassTwo implements MyInterfaceTwo{
         System.out.println("4");
 
     }
-
     public static void main(String[] args) {
-        MyInterfaceTwo obj = MyInterfaceTwo()
-
+       MainClassTwo obj = new MainClassTwo();
     }
 }
